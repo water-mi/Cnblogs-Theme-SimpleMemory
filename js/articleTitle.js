@@ -43,7 +43,7 @@ $(document).ready(function () {
             var th2Text = th2.text();
             th2.text('');
             th2.addClass('header__dev');
-            var their = th2.parents('.header__span').prevAll('.header__span[title-type="h1"]');
+            var their = th2.parents('.header__span').prevAll('.header__span[title-type="h2"]');
             if (their.length > 0) {
                 their = $(their[0]);
                 var current  = their.find('.dev__fe i').text();
