@@ -7,13 +7,13 @@ $(document).ready(function () {
     if (s.length === 0) {
         return
     }
-    ch1 = s.find('h1');
-    ch2 = s.find('h2');
+    ch1 = s.find('h2');
+    ch2 = s.find('h3');
 
     if (ch1.length > 0) {
         for (var i = 0; i < ch1.length; i++) {
             var th1 = $(ch1[i]);
-            th1.wrap('<span title-type="h1" class="header__span"></span>');
+            th1.wrap('<span title-type="h2" class="header__span"></span>');
             var th1Text = th1.text();
             th1.text('');
             th1.addClass('header__dev');
@@ -39,7 +39,7 @@ $(document).ready(function () {
         var last = 0;
         for (i = 0; i < ch2.length; i++) {
             var th2 = $(ch2[i]);
-            th2.wrap('<span title-type="h2" class="header__span"></span>');
+            th2.wrap('<span title-type="h3" class="header__span"></span>');
             var th2Text = th2.text();
             th2.text('');
             th2.addClass('header__dev');
