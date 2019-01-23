@@ -1,9 +1,3 @@
-/*!
- * DATE: 2018-03-13
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
- **/
 function Base() {
 
     var bndongJs    = this,
@@ -713,7 +707,7 @@ function Base() {
         pvHtml += "<div><span id='blogRunTimeSpan'></span></div>";
         pvHtml += '<div id="blogrollInfo"></div>';
         pvHtml += '<div id="cnzzInfo"></div>';
-        //$('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
+        $('#footer').append(pvHtml);
 
         if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/bndong") == -1 ) setTheme();
 
