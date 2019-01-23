@@ -711,14 +711,14 @@ function Base() {
         var pvHtml = '<span id="amazingStatSpan"></span>';
         //pvHtml += '<div>【'+window.cnblogsConfig.bottomText.left+'<span id="footerTextIcon">'+window.cnblogsConfig.bottomText.icon+'</span>'+window.cnblogsConfig.bottomText.right+'】</div>';
         pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>ღゝ◡╹)ノ♡</span></div>";
-        pvHtml += '<div id="blogrollInfo"></div>';
-        pvHtml += '<div id="cnzzInfo"></div>';
-        $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
+        //pvHtml += '<div id="blogrollInfo"></div>';
+        //pvHtml += '<div id="cnzzInfo"></div>';
+        //$('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
 
         if (window.cnblogsConfig.themeAuthor && window.location.href.search("www.cnblogs.com/bndong") == -1 ) setTheme();
 
         window.setInterval( setRunTime, 500 );
-        setBlogroll();
+        //setBlogroll();
         timeIds.setCnzzTId    = window.setInterval( setCnzz, 1000 );
         // timeIds.setAmazingTId = window.setInterval( setAmazing, 1000 );
 
