@@ -3554,12 +3554,12 @@ blockquote p {
     margin: 0!important;
     color: #222 !important;
 }
-.header__span h1 {
+.header__span h2 {
     font-size: 28px!important;
     height: 28px;
     line-height: 28px!important;
 }
-.header__span h2 {
+.header__span h3 {
     font-size: 20px!important;
     height: 20px;
     line-height: 20px!important;
@@ -3572,13 +3572,13 @@ blockquote p {
     -webkit-transform: rotateZ(22deg);
     transform: rotateZ(22deg);
 }
-.header__span h1 .dev__slash {
+.header__span h2 .dev__slash {
     color: #5D69A5;
     top: -24px;
     left: 57px;
     font-size: 35px;
 }
-.header__span h2 .dev__slash {
+.header__span h3 .dev__slash {
     color: #85C7B0;
     top: -20px;
     left: 58px;
@@ -3615,22 +3615,22 @@ blockquote p {
     transform: rotateZ(-22deg);
     color: #333;
 }
-.header__span h1 .dev__fe i {
+.header__span h2 .dev__fe i {
     text-indent: -9px;
     top: 13px;
     right: 0;
 }
-.header__span h2 .dev__fe i {
+.header__span h3 .dev__fe i {
     text-indent: -7px;
     top: 12px;
     right: 0;
 }
-.header__span h1 .dev__ux i {
+.header__span h2 .dev__ux i {
     text-indent: -6px;
     top: 2px;
     left: -3px;
 }
-.header__span h2 .dev__ux i {
+.header__span h3 .dev__ux i {
     text-indent: -8px;
     top: 0;
     left: 0;
@@ -3644,12 +3644,12 @@ blockquote p {
     font-weight: bold;
     font-family: "Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif;
 }
-.header__span h1 .dev__developer {
+.header__span h2 .dev__developer {
     top: -20px;
     left: 94px;
     min-height: 34px;
 }
-.header__span h2 .dev__developer {
+.header__span h3 .dev__developer {
     top: -17px;
     left: 94px;
     min-height: 24px;
