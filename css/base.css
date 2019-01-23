@@ -4,6 +4,14 @@
 (824,15): run-time error CSS1025: Expected comma or open brace, found ';'
 (1154,42): run-time error CSS1062: Expected semicolon or closing curly-brace, found ')'
  */
+.cnblogs-markdown pre code {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgba(255,255,255,0) !important;
+    border: 0px !important;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    font-size: 16px !important;
+}
 
 /**************************************************
 第一部分：
@@ -1250,11 +1258,8 @@ button {
 
 /*****留言页面开始*****************************/
 #footer {
-    min-height: 100px;
-    _height: 15px;
     position: absolute;
     margin: 0;
-    margin-top: 200px;
     left: 0;
     right: 0;
     background: #232323;
