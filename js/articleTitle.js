@@ -14,7 +14,7 @@ $(document).ready(function () {
         for (var i = 0; i < ch1.length; i++) {
             var th1 = $(ch1[i]);
             th1.wrap('<span title-type="h2" class="header__span"></span>');
-            var th1Text = th1.text();
+            var th1Text = 'h1';
             th1.text('');
             th1.addClass('header__dev');
             var th1Html = '<b class="dev__fe"><i>'+(i+1)+'</i></b>';
@@ -40,7 +40,7 @@ $(document).ready(function () {
         for (i = 0; i < ch2.length; i++) {
             var th2 = $(ch2[i]);
             th2.wrap('<span title-type="h3" class="header__span"></span>');
-            var th2Text = th2.text();
+            var th2Text = 'h2';
             th2.text('');
             th2.addClass('header__dev');
             var their = th2.parents('.header__span').prevAll('.header__span[title-type="h2"]');
