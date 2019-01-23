@@ -16,7 +16,7 @@ a.ready(function () {
         o, p = 18,
         q = true,
         r = true,
-        s = $('#' + c);
+        s = $('##' + c);
     if (s.length === 0) {
         return
     };
