@@ -24,7 +24,7 @@ a.ready(function () {
     o = s.find(':header');
     if (o.length > p) {
         r = false;
-        var t = s.find('h1');
+        var t = s.find('h2');
         var u = s.find('h3');
         if (t.length + u.length > p) {
             q = false
@@ -34,14 +34,14 @@ a.ready(function () {
         var u = $(this),
             v = u[0];
         
-        if ($.inArray((v.tagName.toLowerCase()), ["h1", "h3"]) == -1) return true;
+        if ($.inArray((v.tagName.toLowerCase()), ["h2", "h3"]) == -1) return true;
         
         var title=u.text();
         var text=u.text();
 
         u.attr('id', 'autoid-' + l + '-' + m + '-' + n);
 
-        if (v.localName === 'h1') {
+        if (v.localName === 'h2') {
             l++;
             m = 0;
             if(text.length>26) text=text.substr(0,26)+"...";
