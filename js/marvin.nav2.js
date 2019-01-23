@@ -57,18 +57,18 @@ a.ready(function () {
 
                 var titleContent = text.replace(/^\d+\|[0-9]+/g, '');
 
-                j += '<li class="h2Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + (text.replace('|', '.').replace(titleContent, '&nbsp;&nbsp;'+titleContent)) + '</a></li>';
+                j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + (text.replace('|', '.').replace(titleContent, '&nbsp;&nbsp;'+titleContent)) + '</a></li>';
             }
         }
     });
-    $('#' + f + '>ul').html(j);
+    $('##' + f + '>ul').html(j);
     b.data('spy', 'scroll');
     b.data('target', '.sideCatalogBg');
     $('body').scrollspy({
         target: '.sideCatalogBg'
     });
-    $sideCatelog = $('#' + e);
-    $('#' + g).on('click', function () {
+    $sideCatelog = $('##' + e);
+    $('##' + g).on('click', function () {
         if ($(this).hasClass('sideCatalogBtnDisable') && $sideCatelog.css('visibility') == 'visible') {
             $sideCatelog.css('visibility', 'hidden');
             $(this).removeClass('sideCatalogBtnDisable');
@@ -77,17 +77,17 @@ a.ready(function () {
             $(this).addClass('sideCatalogBtnDisable');
         }
     });
-    $('#' + h).on('click', function () {
+    $('##' + h).on('click', function () {
         $("html,body").animate({
             scrollTop: 0
         }, 500)
     });
-    $sideToolbar = $('#' + d);
+    $sideToolbar = $('##' + d);
 
     var nav_li = $('#sideCatalog-catalog ul li');
     
     if (nav_li.length == 0) {
         $sideCatelog.css('visibility', 'hidden');
-        $('#' + g).removeClass('sideCatalogBtnDisable');
+        $('##' + g).removeClass('sideCatalogBtnDisable');
     }
 });
