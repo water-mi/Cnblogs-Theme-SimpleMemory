@@ -199,7 +199,7 @@ function Base() {
         $('.inner').css('max-width', '100vw');
 
         bndongJs.setDomHomePosition();
-        bndongJs.setCodeHighlighting();
+        //bndongJs.setCodeHighlighting();
 
         require(['baguetteBox', 'marvin', 'articleStatement'], function(baguetteBox) {
 
