@@ -4,6 +4,9 @@
 (824,15): run-time error CSS1025: Expected comma or open brace, found ';'
 (1154,42): run-time error CSS1062: Expected semicolon or closing curly-brace, found ')'
  */
+#BlogPostCategory, #blog_post_info {
+    display: none;
+}
 .cnblogs-markdown pre code {
     margin: 0 !important;
     padding: 0 !important;
