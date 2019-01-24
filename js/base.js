@@ -800,16 +800,18 @@ function Base() {
         // 添加最新随笔
         if (sidebar.length > 0 && menuSidebar.html() == '')
             menuSidebar.html(getMenuData(sidebar, 'icon-time_fill')).prev('.m-list-title').show();
+	    
 	// 添加友情链接
 	if (sbFriends.length > 0 && menuFriends.html() == '')
 	    menuFriends.html(getMenuData(sbFriends, 'icon-shandian')).prev('.m-list-title').show();
+	    
         // 添加我的标签
         if (toptags.length > 0 && menuToptags.html() == '')
             menuToptags.html(getMenuData(toptags, 'icon-label_fill')).prev('.m-list-title').show();
 
         // 添加随笔分类
-        if (sbClassify.length > 0 && menuClassify.html() == '')
-            menuClassify.html(getMenuData(sbClassify, 'icon-marketing_fill')).prev('.m-list-title').show();
+        /*if (sbClassify.length > 0 && menuClassify.html() == '')
+            menuClassify.html(getMenuData(sbClassify, 'icon-marketing_fill')).prev('.m-list-title').show();*/
 
         // 添加随笔档案
         if (sbRecord.length > 0 && menuRecord.html() == '')
