@@ -805,7 +805,7 @@ function Base() {
 	
 	// 添加搜索
 	if ((typeof sbSearch == 'string') && menuSearch.html() == '')
-	    menuSearch.html(tools.htmlFiltrationScript(sbSearch));
+	    menuSearch.html(tools.htmlFiltrationScript(sbSearch)).prev('.m-list-title').show();
 	    
 	// 添加友情链接
 	if (sbFriends.length > 0 && menuFriends.html() == '')
