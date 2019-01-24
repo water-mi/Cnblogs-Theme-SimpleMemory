@@ -778,6 +778,7 @@ function Base() {
     this.setMenuData = function() {
         var introduceHtml    = $('#profile_block').html(),        // 个人信息
             sidebar          = $('#sidebar_recentposts ul li'),   // 最新随笔
+	    sbSearch         = $('#sidebar_search').html(),       // 搜索
 	    sbFriends        = $('#sidebar_links1389276 ul li'),  // 友情链接
             toptags          = $('#sidebar_toptags ul li'),       // 我的标签
             sbClassify       = $('#sidebar_postcategory ul li'),  // 随笔分类
@@ -786,6 +787,7 @@ function Base() {
             topDiggPosts     = $('#TopDiggPostsBlock ul li'),     // 推荐排行
             menuIntroduce    = $('#introduce'),
             menuSidebar      = $('#sb-sidebarRecentposts'),
+	    menuSearch       = $('#sb-Search'),
 	    menuFriends      = $('#sb-Friends'),
             menuToptags      = $('#sb-toptags'),
             menuClassify     = $('#sb-classify'),
@@ -800,6 +802,10 @@ function Base() {
         // 添加最新随笔
         if (sidebar.length > 0 && menuSidebar.html() == '')
             menuSidebar.html(getMenuData(sidebar, 'icon-time_fill')).prev('.m-list-title').show();
+	
+	// 添加搜索
+	if ((typeof sbSearch == 'string') && menuSearch.html() == '')
+	    menuSearch.html(tools.htmlFiltrationScript(sbSearch));
 	    
 	// 添加友情链接
 	if (sbFriends.length > 0 && menuFriends.html() == '')
