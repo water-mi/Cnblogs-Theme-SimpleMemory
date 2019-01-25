@@ -24,8 +24,8 @@ a.ready(function () {
     o = s.find(':header');
     if (o.length > p) {
         r = false;
-        var t = s.find('h1');
-        var u = s.find('h2');
+        var t = s.find('h2');
+        var u = s.find('h3');
         if (t.length + u.length > p) {
             q = false
         }
@@ -34,7 +34,7 @@ a.ready(function () {
         var u = $(this),
             v = u[0];
         
-        if ($.inArray((v.tagName.toLowerCase()), ["h1", "h2"]) == -1) return true;
+        if ($.inArray((v.tagName.toLowerCase()), ["h2", "h3"]) == -1) return true;
         
         var title=u.text();
         var lserialNum = u.find('.dev__fe').text();
@@ -43,19 +43,19 @@ a.ready(function () {
 
         u.attr('id', 'autoid-' + l + '-' + m + '-' + n);
 
-        if (v.localName === 'h1') {
+        if (v.localName === 'h2') {
             l++;
             m = 0;
             if(titleContent.length>26) titleContent=titleContent.substr(0,26)+"...";
 
             j += '<li lin=""><a href="#' + u.attr('id') + '" title="' + title + '">' + lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent + '</a><span class="sideCatalog-dot"></span></li>';
-        } else if (v.localName === 'h2') {
+        } else if (v.localName === 'h3') {
             m++;
             n = 0;
             if(q){
                 if(titleContent.length>30) titleContent=titleContent.substr(0,30)+"...";
 
-                j += '<li class="h2Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent + '</a></li>';
+                j += '<li class="h3Offset"><a href="#' + u.attr('id') + '" title="' + title + '">' + lserialNum + '.' + rserialNum + '&nbsp;&nbsp;' + titleContent + '</a></li>';
             }
         }
     });
