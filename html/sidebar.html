@@ -15,18 +15,25 @@
             <div class="nav-title"></div>
             <div class="icon-list">
                 <ul>
-                    <li><a href="https://www.cnblogs.com/bndong/" target="_self">首页</a></li>
-                    <li><a href="https://msg.cnblogs.com/send/BNDong" target="_blank">联系</a></li>
-                    <li><a href="https://www.cnblogs.com/bndong/rss" target="_blank">订阅</a></li>
+                    <li><a href="https://www.cnblogs.com/water-mi/" target="_self">首页</a></li>
+                    <li><a href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank">新随笔</a></li>
                     <li><a href="https://i.cnblogs.com/" target="_blank">管理</a></li>
-                    <li><a href="https://github.com/BNDong" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.cnblogs.com/" target="_blank">CNBlogs</a></li>
+                    <li><a href="https://blog.water-mi.com/" target="_self">Hexo分站</a></li>
+                    <li><a href="https://github.com/water-mi" target="_blank">GitHub</a></li>
                 </ul>
             </div>
 
             <!-- 最新随笔 -->
             <div class="m-list-title"><span>最新随笔</span></div>
             <div class="m-icon-list" id="sb-sidebarRecentposts"></div>
+
+            <!-- 搜索 -->
+            <div class="m-list-title"><span>搜索</span></div>
+            <div class="m-icon-list" id="sb-Search"></div>
+
+            <!-- 友情链接 -->
+            <div class="m-list-title"><span>友情链接</span></div>
+            <div class="m-icon-list" id="sb-Friends"></div>
 
             <!-- 我的标签 -->
             <div class="m-list-title"><span>我的标签</span></div>
@@ -93,21 +100,21 @@
     window.cnblogsConfig = {
 
         // ---- GitHub文件源配置 ----
-        GhUserName: 'BNDong', // GitHub用户名(不是昵称)，注意大小写
+        GhUserName: 'water-mi', // GitHub用户名(不是昵称)，注意大小写
         GhRepositories: 'Cnblogs-Theme-SimpleMemory', // GitHub主题仓库名称
-        GhVersions : 'ee9e7647b4a8b28baba9307e2aa04cf7755d0867', // GitHub提交版本哈希值，根据版本加载代码，我有时候会提交代码进行调试，大家最好加载我仓库代码此处的版本 https://github.com/BNDong/Cnblogs-Theme-SimpleMemory/commits/master
+        GhVersions : '3a2f0de27a5bd11969614bc1a3ef7231f21f415c', // GitHub提交版本哈希值
 
         // ---- 基础信息配置 ----
-        blogUser      : "BNDong", // 博主名称，文章后缀和主页图片上都会使用此名称
-        blogAvatar    : "https://pic.cnblogs.com/avatar/1065454/20161119225202.png", // 用户头像URL
-        blogStartDate : "2016-11-17", // 入园时间，年-月-日，入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
+        blogUser      : "water-mi", // 博主名称，文章后缀和主页图片上都会使用此名称
+        blogAvatar    : "https://pic.cnblogs.com/avatar/1260892/20171019212115.png", // 用户头像URL
+        blogStartDate : "2017-10-18", // 入园时间，年-月-日，入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
 
         // ---- 网站配置 ----
-        webpageTitleOnblur        : "(◍´꒳`◍) Hi, BNDong", // 当前页失去焦点，页面title显示文字
+        webpageTitleOnblur        : "My Blog", // 当前页失去焦点，页面title显示文字
         webpageTitleOnblurTimeOut : 500, // 当前页失去焦点，页面title变化，延时时间，单位毫秒
-        webpageTitleFocus         : "(*´∇｀*) 欢迎回来！", // 当前页获取焦点，页面title显示文字，显示后延时恢复原title
+        webpageTitleFocus         : "Welcome Back!", // 当前页获取焦点，页面title显示文字，显示后延时恢复原title
         webpageTitleFocusTimeOut  : 1000, // 当前页获取焦点，页面title变化，延时时间，单位毫秒
-        webpageIcon : "https://files.cnblogs.com/files/bndong/blog_logo.gif", // 网站图标
+        webpageIcon : "https://common.cnblogs.com/favicon.ico", // 网站图标
 
         // ---- 进度条配置 ----
         progressBar: {
@@ -142,7 +149,7 @@
 
 
         // ---- 页面动效配置 ----
-        homeTopAnimationRendered: true, // true || false ,是否渲染主页头图动效
+        homeTopAnimationRendered: false, // true || false ,是否渲染主页头图动效
         homeTopAnimation: { // 主页头图动效设置
             radius: 15,
             density: 0.2,
@@ -150,7 +157,7 @@
             clearOffset: 0.3
         },
 
-        essayTopAnimationRendered: true, // true || false ,是否渲染随笔页头图动效
+        essayTopAnimationRendered: false, // true || false ,是否渲染随笔页头图动效
         essayTopAnimation: { // 随笔页头图动效设置
             triW : 14,
             triH : 20,
@@ -169,7 +176,7 @@
             ]
         },
 
-        bgAnimationRendered: true, // true || false ,是否渲染背景动效
+        bgAnimationRendered: false, // true || false ,是否渲染背景动效
         backgroundAnimation : { // 背景动效设置
             colorSaturation: "60%",
             colorBrightness: "50%",
@@ -185,12 +192,12 @@
 
         // ---- 主页配置 ----
         homeTopImg    : [ // 主页图片Url，推荐尺寸>= 1920*1080，支持多张，每次刷新随机设置一张
-            "https://raw.githubusercontent.com/BNDong/Cnblogs-Theme-SimpleMemory/master/img/home_top_bg.jpg"
+            "https://www.cnblogs.com/images/cnblogs_com/water-mi/1389984/o_1.jpg"
         ],
         homeBannerText: "", // 主页头图上的标语，设置此选项会固定显示文字，默认为空，自动获取一句。
 
         // ---- 随笔页配置 ----
-        essayTopImg: "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-569548.png", // 随笔页图片Url
+        essayTopImg: "https://www.cnblogs.com/images/cnblogs_com/water-mi/1262285/o_3035e2c52f467776798cbdb695ef5804.jpg", // 随笔页图片Url
         essayCodeHighlightingType: 'cnblogs', // 代码主题插件类型：cnblogs || highlightjs || prettify
         essayCodeHighlighting: 'cnblogs', // 代码高亮主题，具体主题参考文档
         essaySuffix:{ // 随笔后缀处配置
@@ -200,7 +207,7 @@
         },
 
         // ---- 页脚配置 ----
-        bottomBlogroll: [ // 友情链接，[[链接名,链接]....]
+         bottomBlogroll: [ // 友情链接，[[链接名,链接]....]
             ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
             ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
             ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
@@ -208,18 +215,14 @@
             ["申请坑位", 'https://msg.cnblogs.com/send/BNDong'],
         ],
         bottomText: {  // 页脚标语
-            icon: "❤️", // 图标
-            left : "事实并非理所当然", // 图标左侧文字
-            right: "世界总是欲盖弥彰"  // 图标右侧文字
+           icon: "", // 图标
+           left : "", // 图标左侧文字
+           right: ""  // 图标右侧文字
         },
 
         // ---- 控制台输出 ----
-        consoleList: [
-            ['BNDong CNBlogs', 'https://www.cnblogs.com/bndong'],
-            ['BNDong GitHub', 'https://github.com/BNDong'],
-            ['BNDong Email', 'dbuo@foxmail.com']
-        ],
-        themeAuthor: true // 是否显示主题作者（原谅我的臭屁，O(∩_∩)O哈哈~）
+        consoleList: [ ],
+        themeAuthor: false // 是否显示主题作者（原谅我的臭屁，O(∩_∩)O哈哈~）
     };
 
     // start cache
