@@ -1,2 +1,17 @@
 <!-- Loading 底层遮罩 -->
 <div id='loading'></div>
+<script>
+$(document).ready(function(){
+    var doc_pre = $(".cnblogs-markdown  pre");
+    doc_pre.each(function(){
+        var class_val = $(this).attr('class');
+        var lan_class = 'language-'+class_val;
+        var pre_content = '<code class="'+lan_class+'">'+$(this).html()+'</code>';
+        $(this).html(pre_content);
+        $(this).attr("class",'line-numbers ');
+    });
+});
+</script>
+<link href="https://blog-static.cnblogs.com/files/water-mi/prism-light.css" rel="stylesheet" />
+<script src="https://blog-static.cnblogs.com/files/water-mi/prism-light.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
